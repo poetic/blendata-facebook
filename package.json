@@ -1,0 +1,22 @@
+{
+  "name": "facebook-blendata",
+  "version": "0.0.1",
+  "description": "An inhouse package to manage facebook API calls",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/poetic/blendata-facebook.git"
+  },
+  "keywords": [
+    "facebook"
+  ],
+  "author": "poetic systems",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poetic/blendata-facebook/issues"
+  },
+  "homepage": "https://github.com/poetic/blendata-facebook#readme"
+}
