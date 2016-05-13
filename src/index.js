@@ -60,7 +60,7 @@ class FacebookApi {
     return formattedData;
   }
 
-  getPageData() => {
+  getPageData() {
     const uri = `${this.baseEndPoint}/${this.pageId}/insights/?access_token=${this.longTermPageToken}`;
 
     return this._get(uri);

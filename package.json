@@ -4,11 +4,12 @@
   "description": "An inhouse package to manage facebook API calls",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --presets babel-preset-es2015 --out-dir lib",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/poetic/blendata-facebook.git"
+    "url": "https://github.com/poetic/blendata-facebook"
   },
   "keywords": [
     "facebook"
