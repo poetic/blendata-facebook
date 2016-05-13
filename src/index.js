@@ -1,21 +1,11 @@
 import _ from 'lodash';
 
 class FacebookApi {
-  constructor(apiCreds) {
-    const isValid = options => options.pageId && options.pageToken;
-
-    if (isValid(apiCreds)) {
-      this._setup(apiCreds);
-    } else {
-      this._throwError('Invalid api credentials');
-    }
+  constructor() {
+    this._setup();
   }
 
   _setup(options) {
-    const { pageId, pageToken } = options;
-
-    this.pageId = pageId;
-    this.pageToken = pageToken;
     this.baseEndPoint = 'https://graph.facebook.com';
   }
 
@@ -60,8 +50,8 @@ class FacebookApi {
     return formattedData;
   }
 
-  getPageData() {
-    const uri = `${this.baseEndPoint}/${this.pageId}/insights/?access_token=${this.longTermPageToken}`;
+  getPageData(pageId, pageToken) {
+    const uri = `${this.baseEndPoint}/${pageId}/insights/?access_token=${pageToken}`;
 
     return this._get(uri);
   }
