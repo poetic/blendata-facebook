@@ -19,7 +19,7 @@ class FacebookApi {
       this._throwError('FacebookApi is missing required arguments');
     }
 
-    const requestOptions = { uri, json: true };
+    const requestOptions = { uri, headers: { 'User-Agent': 'Request-Promise' }, json: true };
 
     return request(requestOptions);
   }
