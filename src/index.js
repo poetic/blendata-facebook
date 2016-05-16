@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import request from 'request-promise';
 
 class FacebookApi {
   constructor() {
