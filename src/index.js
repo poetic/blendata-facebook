@@ -6,7 +6,7 @@ class FacebookApi {
     this._setup();
   }
 
-  _setup(options) {
+  _setup() {
     this.baseEndPoint = 'https://graph.facebook.com';
   }
 
@@ -19,7 +19,7 @@ class FacebookApi {
       this._throwError('FacebookApi is missing required arguments');
     }
 
-    const requestOptions = { uri, headers: { 'User-Agent': 'Request-Promise' }, json: true };
+    const requestOptions = { uri, json: true };
 
     return request(requestOptions);
   }
